@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <div class="popup-container">
+    <!-- Login View -->
+    <div id="login-view">
+      <div class="header">
+        <div class="title-section center">
+          <h1 class="title">Treasured Labs</h1>
+          <p class="subtitle">Advanced Trading Intelligence</p>
+        </div>
+      </div>
+
+      <div class="feature-cards">
+        <div class="feature-card">
+          <span>🎯 Real-Time Signals</span>
+        </div>
+        <div class="feature-card">
+          <span>🛡️ Smart Security</span>
+        </div>
+        <div class="feature-card">
+          <span>📊 94% Success Rate</span>
+        </div>
+        <div class="feature-card">
+          <span>👥 Alpha Community</span>
+        </div>
+      </div>
+
+      <form id="login-form">
+        <input 
+          type="text" 
+          id="username-input"
+          placeholder="Enter Telegram Username" 
+          required
+        >
+        <button type="submit" id="login-button" class="telegram-button">
+          <i class="fab fa-telegram-plane"></i>
+          Connect with Telegram
+        </button>
+      </form>
+
+      <div class="stats-footer">
+        <div class="stat" data-users>
+          <div class="stat-label">Active Users</div>
+          <div class="stat-value"></div>
+        </div>
+        <div class="stat" data-protected>
+          <div class="stat-label">Protected</div>
+          <div class="stat-value"></div>
+        </div>
+        <div class="stat" data-signals>
+          <div class="stat-label">Signals/Day</div>
+          <div class="stat-value"></div>
+        </div>
+      </div>
+
+      <div class="social-links">
+        <a href="https://twitter.com/TreasuredLabs" target="_blank" class="social-link">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://t.me/TreasuredLabs" target="_blank" class="social-link">
+          <i class="fab fa-telegram"></i>
+        </a>
+        <a href="https://treasuredlabs.xyz" target="_blank" class="social-link">
+          <i class="fas fa-globe"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Scanner View (Initially Hidden) -->
+    <div id="scanner-view" class="hidden">
+      <div class="header">
+        <div class="title-section">
+          <h1 class="title">Treasure Scanner</h1>
+          <p class="subtitle">Real-time protection for your digital assets</p>
+        </div>
+        <div class="status-badge">Ready to Scan</div>
+      </div>
+
+      <div class="input-section">
+        <input 
+          type="text" 
+          id="contract-input" 
+          placeholder="Enter Solana Contract Address"
+          class="contract-input"
+        />
+        <button id="scan-button" class="scan-button">
+          Scan Contract
+        </button>
+      </div>
+
+      <!-- Scanner Results View -->
+      <div id="analysis-results" class="analysis-grid hidden">
+        <!-- Safety Score -->
+        <div class="safety-card">
+          <div class="card-header">
+            <h3>Treasured Safety</h3>
+            <span class="status-tag protected">Protected</span>
+          </div>
+          <div class="safety-score">92/100</div>
+        </div>
+
+        <!-- Vault Analysis -->
+        <div class="analysis-card">
+          <h3>Vault Analysis</h3>
+          <div class="analysis-items">
+            <div class="analysis-item">
+              <span>Honeypot Risk</span>
+              <span class="tag low">Low</span>
+            </div>
+            <div class="analysis-item">
+              <span>Previous Rug Safety</span>
+              <span class="tag clean">Clean</span>
+            </div>
+            <div class="analysis-item">
+              <span>Fresh Wallet Activity</span>
+              <div class="tag-group">
+                <span class="tag new">12 New</span>
+                <span class="tag time">24h</span>
+              </div>
+            </div>
+            <div class="analysis-item">
+              <span>Real Wallet Activity</span>
+              <div class="tag-group">
+                <span class="tag percentage">85%</span>
+                <span class="tag high">High</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Alpha Alerts -->
+        <div class="alerts-card">
+          <div class="alerts-header">
+            <h3>Alpha Alerts</h3>
+            <span class="alert-count">3 New</span>
+          </div>
+          <div class="alert-items">
+            <div class="alert-item">
+              <div class="alert-dot green"></div>
+              <div class="alert-content">
+                <div class="alert-title">BONK</div>
+                <div class="alert-subtitle">Potential 2x breakout forming</div>
+              </div>
+            </div>
+            <div class="alert-item">
+              <div class="alert-dot orange"></div>
+              <div class="alert-content">
+                <div class="alert-title">JUP</div>
+                <div class="alert-subtitle">High volume spike detected</div>
+              </div>
+            </div>
+            <div class="alert-item">
+              <div class="alert-dot yellow"></div>
+              <div class="alert-content">
+                <div class="alert-title">PYTH</div>
+                <div class="alert-subtitle">Accumulation zone reached</div>
+              </div>
+            </div>
+          </div>
+          <button class="view-more-button">
+            <i class="fab fa-telegram"></i>
+            View More in Telegram
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html> 
+</html> 
